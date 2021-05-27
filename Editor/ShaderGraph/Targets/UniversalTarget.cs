@@ -518,42 +518,7 @@ namespace UnityEditor.Rendering.Universal.ShaderGraph
     // TODO: and the same for the rest "Core" things
     static class CorePragmas
     {
-        public static readonly PragmaCollection Default = new PragmaCollection
-        {
-            { Pragma.Target(ShaderModel.Target20) },
-            { Pragma.OnlyRenderers(new[]{ Platform.GLES, Platform.GLES3, Platform.GLCore, Platform.D3D11 }) },
-            { Pragma.Vertex("vert") },
-            { Pragma.Fragment("frag") },
-        };
-
-        public static readonly PragmaCollection Instanced = new PragmaCollection
-        {
-            { Pragma.Target(ShaderModel.Target20) },
-            { Pragma.OnlyRenderers(new[]{ Platform.GLES, Platform.GLES3, Platform.GLCore, Platform.D3D11 }) },
-            { Pragma.MultiCompileInstancing },
-            { Pragma.Vertex("vert") },
-            { Pragma.Fragment("frag") },
-        };
-
-        public static readonly PragmaCollection Forward = new PragmaCollection
-        {
-            { Pragma.Target(ShaderModel.Target20) },
-            { Pragma.OnlyRenderers(new[]{ Platform.GLES, Platform.GLES3, Platform.GLCore, Platform.D3D11 }) },
-            { Pragma.MultiCompileInstancing },
-            { Pragma.MultiCompileFog },
-            { Pragma.Vertex("vert") },
-            { Pragma.Fragment("frag") },
-        };
-
-        public static readonly PragmaCollection _2DDefault = new PragmaCollection
-        {
-            { Pragma.Target(ShaderModel.Target20) },
-            { Pragma.ExcludeRenderers(new[]{ Platform.D3D9 }) },
-            { Pragma.Vertex("vert") },
-            { Pragma.Fragment("frag") },
-        };
-
-        public static readonly PragmaCollection DOTSDefault = new PragmaCollection
+		public static readonly PragmaCollection DOTSDefault = new PragmaCollection
         {
             { Pragma.Target(ShaderModel.Target45) },
             { Pragma.ExcludeRenderers(new[]{ Platform.GLES, Platform.GLES3, Platform.GLCore }) },
@@ -589,6 +554,41 @@ namespace UnityEditor.Rendering.Universal.ShaderGraph
             { Pragma.MultiCompileInstancing },
             { Pragma.MultiCompileFog },
             { Pragma.DOTSInstancing },
+            { Pragma.Vertex("vert") },
+            { Pragma.Fragment("frag") },
+        };
+		
+        public static readonly PragmaCollection Default = new PragmaCollection
+        {
+            { Pragma.Target(ShaderModel.Target20) },
+            { Pragma.OnlyRenderers(new[]{ Platform.GLES, Platform.GLES3, Platform.GLCore, Platform.D3D11 }) },
+            { Pragma.Vertex("vert") },
+            { Pragma.Fragment("frag") },
+        };
+
+        public static readonly PragmaCollection Instanced = new PragmaCollection
+        {
+            { Pragma.Target(ShaderModel.Target20) },
+            { Pragma.OnlyRenderers(new[]{ Platform.GLES, Platform.GLES3, Platform.GLCore, Platform.D3D11 }) },
+            { Pragma.MultiCompileInstancing },
+            { Pragma.Vertex("vert") },
+            { Pragma.Fragment("frag") },
+        };
+
+        public static readonly PragmaCollection Forward = new PragmaCollection
+        {
+            { Pragma.Target(ShaderModel.Target20) },
+            { Pragma.OnlyRenderers(new[]{ Platform.GLES, Platform.GLES3, Platform.GLCore, Platform.D3D11 }) },
+            { Pragma.MultiCompileInstancing },
+            { Pragma.MultiCompileFog },
+            { Pragma.Vertex("vert") },
+            { Pragma.Fragment("frag") },
+        };
+
+        public static readonly PragmaCollection _2DDefault = new PragmaCollection
+        {
+            { Pragma.Target(ShaderModel.Target20) },
+            { Pragma.ExcludeRenderers(new[]{ Platform.D3D9 }) },
             { Pragma.Vertex("vert") },
             { Pragma.Fragment("frag") },
         };
